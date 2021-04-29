@@ -1,0 +1,9 @@
+{
+  "name": "TS_BlockChain",
+  "version": "1.0.0",
+  "description": "learning ts by making a Blockchain with it",
+  "main": "index.js",
+  "repository": "https://github.com/khjsla/TS_BlockChain.git",
+  "author": "khjsla <rkdguswlsla@naver.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+//how to compile JS
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2015", //js version
+        "sourceMap": true, //source map 처리를 하고싶은 지 - yes
+    },
+    "include": [
+        "index.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

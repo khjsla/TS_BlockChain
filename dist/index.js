@@ -1,20 +1,20 @@
 "use strict";
-//console.log("hello"); //tsc (command)-> index.js.map 생성해줌
 Object.defineProperty(exports, "__esModule", { value: true });
-const person = {
-    name: "khj",
-    gender: "male",
-    age: 22
-};
-// const sayhi = (name: String, age: number, gender: String): String=>{ // :type possible 
-//      return `Hello ${name}, u r ${age}, u r a${gender}!!!!`;
-// }
-//how to send Object?!
-const sayhi = (person) => {
-    return `Hello ${person.name}, u r ${person.age}, u r a${person.gender}!!!!`;
-};
-//sayhi("khj",22,"male"); //ts have to have all 3 argus
-//console.log(sayhi("khj",22,"male")); //can see now
-//how to send Object?!
-console.log(sayhi(person)); //can see now
+class Block {
+    constructor(index, hash, previousHash, data, timestamp) {
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.data = data;
+        this.timestamp = timestamp;
+    }
+}
+const genesisBlock = new Block(0, "202020202020202", "", "Hello", 123456);
+let blockchain = [genesisBlock];
+//[Block] = this mean == array of Block .
+//and can make array *ONLY* with Block. 
+//blockchain.push("dumbstuff"); 
+// ㄴ It Can not be work because of String is NOT a BLOCK
+// and this is the smart of the TS
+console.log('blockchain: ', blockchain);
 //# sourceMappingURL=index.js.map

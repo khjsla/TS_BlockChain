@@ -1,33 +1,39 @@
-//console.log("hello"); //tsc (command)-> index.js.map 생성해줌
+//RUN WITH npm start.
 
-// const name = "khj",
-// age= 25,
-// gender = "male";
-interface Human {
-     name: string,
-     age: number,
-     gender: string
+class Block {
+     public index: number;
+     public hash: string;
+     public previousHash: string;
+     public data: string;
+     public timestamp: number;
+
+     constructor(
+          index: number,
+          hash: string,
+          previousHash: string,
+          data: string,
+          timestamp: number,
+     ){
+          this.index = index;
+          this.hash = hash;
+          this.previousHash = previousHash;
+          this.data = data;
+          this.timestamp = timestamp;
+     }
 }
 
-const person = {
-     name: "khj",
-     gender: "male",
-     age: 22
-}
+const genesisBlock:Block = new Block(0,"202020202020202","","Hello", 123456);
 
-// const sayhi = (name: String, age: number, gender: String): String=>{ // :type possible 
-//      return `Hello ${name}, u r ${age}, u r a${gender}!!!!`;
-// }
+let blockchain: [Block] = [genesisBlock]; 
+//[Block] = this mean == array of Block .
+//and can make array *ONLY* with Block. 
 
-//how to send Object?!
-const sayhi = (person: Human) =>{ // :type possible 
-     return `Hello ${person.name}, u r ${person.age}, u r a${person.gender}!!!!`;
-}
+//blockchain.push("dumbstuff"); 
+// ㄴ It Can not be work because of String is NOT a BLOCK
+// and this is the smart of the TS
 
-//sayhi("khj",22,"male"); //ts have to have all 3 argus
-//console.log(sayhi("khj",22,"male")); //can see now
+console.log('blockchain: ', blockchain);
 
-//how to send Object?!
-console.log(sayhi(person)); //can see now
 
-export {};
+
+export { };

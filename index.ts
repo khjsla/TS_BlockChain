@@ -1,1 +1,0 @@
-console.log("hello"); //tsc (command)-> index.js.map 생성해줌

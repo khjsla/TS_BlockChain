@@ -70,7 +70,7 @@ const createNewBlock = (data: string): Block => { //have to have data argu , and
      ); //this is NEW BLOCK.
 
      //block 이 추가되면, 블록체인에 추가 할거임
-     addBlock(newBlock); **
+     addBlock(newBlock); 
 
      return newBlock;
 };
